@@ -33,10 +33,13 @@
 
     function toggleButton() {
         let myDiv = document.getElementById("links");
+        let myButton = document.getElementById("my-btn");
         if (myDiv.style.display === "none") {
-         myDiv.style.display = "block";
+            myDiv.style.display = "block";
+            myButton.innerHTML = ("Hide");
         } else {
             myDiv.style.display = "none";
+            myButton.innerHTML = "Show";
         }
     }
 
