@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="myDiv"></div>
+    <script>
+        // here goes the Javascript code
+
+        // let myDiv = document.createElement("div");
+        // document.body.appendChild(myDiv);
+        document.getElementById('myDiv').innerHTML = ("<div id=another-div></div>");
+        let anotherDiv = document.getElementById('another-div');
+
+        function name(x, y, y1) {
+            let anotherDiv = document.getElementById(x)
+            anotherDiv.innerHTML += y;
+            anotherDiv.innerHTML += y1;
+            anotherDiv.style.border = "2px solid #936639";
+            anotherDiv.style.width = "600px";
+            anotherDiv.style.color = "#656d4a";
+            anotherDiv.style.backgroundColor = "#c2c5aa";
+            anotherDiv.style.textAlign = "center";
+            anotherDiv.style.paddingBottom = "21.44px";
+            anotherDiv.style.borderRadius = "50px";
+        };
+
+        function styleDiv(id) {
+            return
+        };
+
+        name('another-div', ("<h1>Big Heading</h1>"), ("<h2>Smaller Heading</h2><button id=my-button>I don't do anything</button>"));
+        
+        function btn() {
+            let myButton = document.getElementById('my-button');
+        };
+
+        function getStyle(id) {
+            return document.getElementById(id).style;
+        }
+
+        btn();
+
+        getStyle('my-button').color = "#c2c5aa";
+        getStyle('my-button').backgroundColor = "#936639";
+        getStyle('my-button').borderRadius = "25px";
+        getStyle('my-button').height = "50px";
+        getStyle('my-button').width = "220px";
+        getStyle('my-button').fontSize = "1rem";
+        getStyle('my-button').textTransform = "uppercase";
+
+       
+        
+        
+
+        
+        // let myButton = document.getElementById('my-button');
+        // myButton.style.backgroundColor = "#936639";
+        // myButton.style.color = "#c2c5aa";
+        // myButton.style.borderRadius = "25px";
+        // myButton.style.height = "50px";
+        // myButton.style.width = "220px";
+        // myButton.style.fontSize = "1rem";
+        // myButton.style.textTransform = "uppercase";
+
+    </script>
+</body>
+
+</html>
