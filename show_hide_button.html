@@ -5,8 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Show/hide button</title>
+
+    <style>
+        a {
+            display: block;
+        }
+        /* #links {
+            display: block;
+        } */
+    </style>
 </head>
 <body>
-    
+<main>
+    <button onclick="toggleButton()" id="my-btn">Show</button>
+    <div id="links">
+        <a href="http://www.google.com">Link to Google</a>
+        <a href="http://www.google.com">Link to Google</a>
+        <a href="http://www.google.com">Link to Google</a>
+        <a href="http://www.google.com">Link to Google</a>
+        <a href="http://www.google.com">Link to Google</a>
+    </div>
+</main>
+
+
+
+<script>
+
+    function toggleButton() {
+        let myDiv = document.getElementById("links");
+        if (myDiv.style.display === "none") {
+         myDiv.style.display = "block";
+        } else {
+            myDiv.style.display = "none";
+        }
+    }
+
+
+</script>
+
 </body>
 </html>
