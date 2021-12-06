@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">Hello world</div>
+    <div id="div2">Hello oh my</div>
+    <div id="div3">Hello very hello</div>
+
+    <script>
+
+        function setStyle(id, prop, value) {
+            let checkID = typeof (id) == "string";
+            let checkProp = typeof (prop) == "string";
+            let checkValue = typeof (value) == "string";
+
+            if(!checkID || !checkProp || !checkValue)
+                return undefined;
+
+            let elem = document.getElementById(id);
+            if (elem != null) {
+                elem.style[prop] = value;
+            }
+
+            // if (typeof (prop) || typeof (value) == undefined) {
+                
+            // }
+
+
+            return (elem != null) ? elem.style : null;
+        }
+
+        setStyle("div", "color", "orange");
+        setStyle("div1", "color", "red");
+
+        setStyle("div2").color = "green";
+        setStyle("div3").color = "blue";
+
+    </script>
+    
+</body>
+</html>
