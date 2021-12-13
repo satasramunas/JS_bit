@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masyvai_uzduotys</title>
+</head>
+<body>
+    
+    <script>
+
+        // // PIRMAS ////
+
+        let numbers = [];
+        for (let i = 0; i < 30; i++) {
+            numbers[i] = Math.floor(Math.random() * (25 - 4) + 5);
+            // console.log(numbers[i]);
+        }
+
+
+        // // ANTRAS ////
+
+        // a //
+
+        let tenOrMore = 0;
+        for (let i = 0; i < 30; i++) {
+            if (numbers[i] > 10) {
+                tenOrMore++;
+            }
+        } 
+        console.log("Reikšmių didesnių už 10 yra " + tenOrMore);
+
+        // b //
+
+        let maxVal = 0;
+        let maxValIndex = [];
+        for (let i = 0; i < 30; i++) {
+            if (numbers[i] > maxVal) {
+                maxVal = numbers[i];
+            }
+        }
+
+        let j = 0;
+        for (let i = 0; i < 30; i++) {
+            if (maxVal == numbers[i]) {
+                maxValIndex[j] = i;
+                j++;
+            }
+        }
+        console.log("Didžiausia masyvo reikšmė yra " + maxVal + " ir indeksai: ");
+        for (let i = 0; i < j; i++) {
+            console.log(maxValIndex[i]);
+        }
+
+        // c //
+
+        let sumEven = 0;
+        for (let i = 0; i < 30; i++) {
+            if (i % 2 == 0) {
+                sumEven += numbers[i];
+            }
+        }
+        console.log("Visų porinių indeksų reikšmių suma yra " + sumEven)
+
+        // d //
+
+        let newArray = [];
+        for (let i = 0; i < 30; i++) {
+            newArray[i] = numbers[i] - i;
+        }
+        console.log("Naujas masyvas, kurio reikšmės yra 1 uždavinio masyvo reikšmės minus tos reikšmės indeksas: ");
+
+        for (let i = 0; i < 30; i++) {
+            console.log( i + " " + numbers[i] + " " + newArray[i]);
+        }
+            
+        
+
+    </script>
+</body>
+</html>
