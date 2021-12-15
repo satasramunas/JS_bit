@@ -72,10 +72,54 @@
         console.log("Naujas masyvas, kurio reikšmės yra 1 uždavinio masyvo reikšmės minus tos reikšmės indeksas: ");
 
         for (let i = 0; i < 30; i++) {
-            console.log( i + " " + numbers[i] + " " + newArray[i]);
+            console.log(i + " " + numbers[i] + " " + newArray[i]);
         }
-            
-        
+
+        // e //
+
+        for (let i = 30; i < 40; i++) {
+            numbers[i] = Math.floor(Math.random() * (25 - 4) + 5);
+        }
+        console.log("Pradinis masyvas papildytas 10 reikšmių:")
+
+        for (let i = 0; i < 40; i++) {
+            console.log(i + " " + numbers[i]);
+        }
+
+        // f //
+
+        let evenIndex = [];
+        let oddIndex = [];
+
+        for (i = 0; i < 40; i++) {
+            if (i % 2 == 0) {
+                evenIndex.push(numbers[i]);
+            } else {
+                oddIndex.push(numbers[i]);
+            }
+        }
+        console.log("Porinių ir neporinių indeksų reikšmių masyvai, sukurti panaudojant pradinį masyvą:");
+        console.log(evenIndex, oddIndex);
+
+        // g //
+
+        for (let i = 0; i < 40; i++) {
+            if (i % 2 === 0 && numbers[i] > 15) {
+                numbers[i] = 0;
+            }
+        } 
+        console.log(numbers);
+
+        // h // 
+
+        let minIndex = -1;
+        for (i = 0; i < numbers.length; i++) {
+            if (numbers[i] > 10) {
+                minIndex = i;
+                break; // BUTINAI REIKIA SITA PRIRASYTI, KAD IS KARTO SUSTABDYTU CIKLA ADES PIRMAJI INDEKSA
+            }
+        }
+        console.log("Maziausias indeksas: " + minIndex)
 
     </script>
 </body>
